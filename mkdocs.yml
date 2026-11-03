@@ -1,0 +1,102 @@
+site_name: 파이썬 A to Z
+site_description: 왕초보를 위한 한국어 파이썬 학습 위키
+site_url: https://hong-coding.github.io/python-wiki/
+repo_url: https://github.com/Hong-coding/python-wiki
+repo_name: python-wiki
+edit_uri: edit/main/docs/
+copyright: 문서 CC BY 4.0 · 예제 코드 MIT — Hong-coding
+
+theme:
+  name: material
+  language: ko
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: 다크 모드로 전환
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: 라이트 모드로 전환
+
+plugins:
+  - search
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.snippets:
+      base_path: ["."]
+      check_paths: true
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - 시작하기: index.md
+  - 1부 기초:
+      - 01. 설치와 실행 환경: 01-setup.md
+      - 02. 변수와 자료형: 02-variables.md
+      - 03. 조건문: 03-conditions.md
+      - 04. 반복문: 04-loops.md
+      - 05. 함수: 05-functions.md
+  - 2부 데이터 다루기:
+      - 06. 리스트와 딕셔너리: 06-collections.md
+      - 07. 문자열: 07-strings.md
+      - 08. 파일 입출력: 08-files.md
+      - 09. 예외 처리: 09-exceptions.md
+  - 3부 프로그램 구조:
+      - 10. 모듈·패키지·pip·venv: 10-modules.md
+      - 11. 클래스·dataclass·타입 힌트: 11-classes.md
+      - 12. 표준 라이브러리: 12-stdlib.md
+  - 4부 실전:
+      - 13. requests와 RSS 파싱: 13-web.md
+      - 14. 웹 서버와 HTML 템플릿: 14-http-server.md
+      - 15. 메일 보내기와 시크릿 관리: 15-email-env.md
+      - 16. 테스트(unittest): 16-testing.md
+      - 17. git·GitHub·Actions: 17-git-github.md
+  - 사례 학습:
+      - "python -m 패키지.모듈은 어떻게 동작하나": 18-case-python-m.md
+  - 부록:
+      - 자주 만나는 오류: appendix-errors.md

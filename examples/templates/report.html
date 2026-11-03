@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><title>{{ title }}</title></head>
+<body>
+  <h1>{{ title }}</h1>
+  <p>작성일: {{ day }}</p>
+  {% if items %}
+  <ol>
+    {% for item in items %}
+    <li><a href="{{ item.url }}">{{ item.title }}</a>{% if item.views > 100 %} 🔥{% endif %}</li>
+    {% endfor %}
+  </ol>
+  {% else %}
+  <p>오늘은 항목이 없습니다.</p>
+  {% endif %}
+</body>
+</html>

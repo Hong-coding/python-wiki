@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>예제 뉴스</title>
+    <link>https://example.com/</link>
+    <description>학습용 샘플 RSS</description>
+    <item>
+      <title>파이썬 3.13 새 기능 정리</title>
+      <link>https://example.com/news/1</link>
+      <pubDate>Mon, 02 Nov 2026 09:00:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>가상환경을 꼭 써야 하는 이유</title>
+      <link>https://example.com/news/2</link>
+      <pubDate>Mon, 02 Nov 2026 12:30:00 +0900</pubDate>
+    </item>
+    <item>
+      <title>&lt;초보&gt; 반복문 &amp; 조건문</title>
+      <link>https://example.com/news/3</link>
+      <pubDate>Tue, 03 Nov 2026 07:10:00 +0900</pubDate>
+    </item>
+  </channel>
+</rss>

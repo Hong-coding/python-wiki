@@ -1,0 +1,7 @@
+.venv/
+site/
+__pycache__/
+*.pyc
+.env
+examples/_out/
+examples/case_python_m/memos.json
